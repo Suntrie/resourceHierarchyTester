@@ -15,10 +15,12 @@ public class MyClass {
         InputStream in = MyClass.class.getResourceAsStream("myfile.txt");
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         System.out.println(reader.readLine());
+        reader.close();
 
         // Works when file inside jar (path is relative to the Resources directory)
         InputStream in1 = MyClass.class.getResourceAsStream("/myfile1.txt");
         BufferedReader reader1 = new BufferedReader(new InputStreamReader(in1));
         System.out.println(reader1.readLine());
+        reader1.close();
     }
 }
