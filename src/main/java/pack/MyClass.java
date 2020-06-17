@@ -1,6 +1,7 @@
 package pack;
 
 import java.io.*;
+import java.nio.file.Files;
 
 public class MyClass {
 
@@ -8,8 +9,8 @@ public class MyClass {
 
         // Will work when start from working directory (when relative path exists)
 
-        //File newFile = new File("src/main/resources/myfile.txt");
-        //System.out.println(Files.readString(newFile.toPath()));
+        File newFile = new File("src/main/resources/myfile3.txt");
+        System.out.println(Files.readString(newFile.toPath()));
 
         // Works when file inside jar (path is relative to the directory named as package for current class)
         InputStream in = MyClass.class.getResourceAsStream("myfile.txt");
